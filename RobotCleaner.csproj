@@ -1,0 +1,31 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RobotCleaner.Models\**" />
+    <Compile Remove="RobotCleaner.Services\**" />
+    <Compile Remove="RobotCleaner.Tests\**" />
+    <EmbeddedResource Remove="RobotCleaner.Models\**" />
+    <EmbeddedResource Remove="RobotCleaner.Services\**" />
+    <EmbeddedResource Remove="RobotCleaner.Tests\**" />
+    <None Remove="RobotCleaner.Models\**" />
+    <None Remove="RobotCleaner.Services\**" />
+    <None Remove="RobotCleaner.Tests\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="6.0.0" />
+    <PackageReference Include="NUnit" Version="3.13.3" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="RobotCleaner.Services\RobotCleaner.Services.csproj" />
+  </ItemGroup>
+
+</Project>
